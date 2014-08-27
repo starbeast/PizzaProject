@@ -26,9 +26,9 @@ DEFAULT_FROM_EMAIL = 'bcdkey@gmail.com'
 DOMAIN = "http://192.168.13.41:8010"
 
 # set django-celery autoloader
-import djcelery
-
-djcelery.setup_loader()
+# import djcelery
+#
+# djcelery.setup_loader()
 
 """
 CREATE DATABASE PizzaProject CHARACTER SET utf8 COLLATE utf8_general_ci;

@@ -130,6 +130,7 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
     'mainapp',
+    'south'
 )
 
 # A sample logging configuration. The only tangible logging
@@ -159,14 +160,6 @@ LOGGING = {  # fixme: remove LOGGING to custom setting depending on staging
             'level': 'DEBUG',
             'class': 'django.utils.log.NullHandler',
         },
-        'custom_sentry_error': {
-            'level': 'ERROR',
-            'class': 'raven.contrib.django.handlers.SentryHandler',
-        },
-        'custom_sentry_debug': {
-            'level': 'DEBUG',
-            'class': 'raven.contrib.django.handlers.SentryHandler',
-        },
         # 'logfile': {
         #     'level':'DEBUG',
         #     'class':'logging.handlers.RotatingFileHandler',
@@ -181,26 +174,6 @@ LOGGING = {  # fixme: remove LOGGING to custom setting depending on staging
             'handlers': ['mail_admins'],
             'level': 'ERROR',
             'propagate': True,
-        },
-        'nextcaller.custom': {
-            'handlers': ['console'],
-            'level': 'DEBUG',
-            'propagate': True,
-        },
-        'raven': {
-            'level': 'DEBUG',
-            'handlers': ['console'],
-            'propagate': False,
-        },
-        'sentry.errors': {
-            'level': 'DEBUG',
-            'handlers': ['console'],
-            'propagate': False,
-        },
-        'django.request.tastypie': {
-            "handlers": ["custom_sentry_error"],
-            "level": "ERROR",
-            "propagate": False
         },
     }
 }
